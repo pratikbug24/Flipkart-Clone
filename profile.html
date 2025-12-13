@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile | Flipkart Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/utils.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+
+    <style>
+        body {
+            background: #f1f3f6;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background: #2874f0;
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .logout-btn {
+            background: white;
+            color: #2874f0;
+            padding: 8px 14px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Profile Card */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            padding: 40px 15px;
+        }
+
+        .profile-card {
+            background: white;
+            width: 420px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            padding: 30px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background: #2874f0;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .profile-card h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .info-group {
+            margin-bottom: 15px;
+        }
+
+        .info-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-group div {
+            padding: 10px;
+            background: #f7f7f7;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo" onclick="goHome()">Flipkart Clone</div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Profile -->
+    <div class="profile-container">
+        <div class="profile-card">
+
+            <div class="profile-img" id="profileInitial">U</div>
+
+            <h2 id="profileName">User Name</h2>
+
+            <div class="info-group">
+                <label>Name</label>
+                <div id="profileNameField"></div>
+            </div>
+
+            <div class="info-group">
+                <label>Email</label>
+                <div id="profileEmail"></div>
+            </div>
+
+            <div class="info-group">
+                <label>Mobile Number</label>
+                <div id="profileMobile"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="flex-all-center">
+        <p>Copyright © Flipkart Clone</p>
+    </footer>
+
+    <script>
+        // Protect page
+        const userData = localStorage.getItem("user");
+        if (!userData) {
+            window.location.href = "login.html";
+        }
+
+        const user = JSON.parse(userData);
+
+        // Fill profile data
+        document.getElementById("profileName").innerText = user.name || "User";
+        document.getElementById("profileNameField").innerText = user.name || "N/A";
+        document.getElementById("profileEmail").innerText = user.email || "N/A";
+        document.getElementById("profileMobile").innerText = user.mobile || "N/A";
+
+        // Profile initial
+        const initial = (user.name || user.email || "U").charAt(0).toUpperCase();
+        document.getElementById("profileInitial").innerText = initial;
+
+        function logout() {
+            localStorage.removeItem("user");
+            window.location.href = "login.html";
+        }
+
+        function goHome() {
+            window.location.href = "home.html";
+        }
+    </script>
+
+</body>
+</html>

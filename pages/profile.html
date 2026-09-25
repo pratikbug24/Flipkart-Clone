@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Flipkart Clone</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo" onclick="goHome()">Flipkart Clone</div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-card">
+            <div class="profile-img" id="profileInitial">U</div>
+
+            <h2 id="profileName">User Name</h2>
+
+            <div class="info-group">
+                <label>Name</label>
+                <div id="profileNameField"></div>
+            </div>
+
+            <div class="info-group">
+                <label>Email</label>
+                <div id="profileEmail"></div>
+            </div>
+
+            <div class="info-group">
+                <label>Mobile Number</label>
+                <div id="profileMobile"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="flex-all-center">
+        <p>Copyright © Flipkart Clone</p>
+    </footer>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

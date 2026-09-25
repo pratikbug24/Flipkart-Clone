@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | Flipkart Clone</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utils.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Flipkart">
+            </div>
+
+            <div class="search">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button class="btn">Search</button>
+            </div>
+
+            <ul>
+                <li><a href="#">Be a Seller</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+
+            <div class="user-area" onclick="toggleDropdown()">
+                👤 <span id="userName">User</span>
+                <div class="dropdown" id="dropdown">
+                    <a href="profile.html">My Profile</a>
+                    <a href="#">Orders</a>
+                    <a href="#" onclick="logout()">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <div class="cart-items">
+            <h2>My Cart (<span id="cartCount">0</span>)</h2>
+            <div id="cartItemsList"></div>
+        </div>
+
+        <div class="price-details">
+            <div class="price-box">
+                <h3>PRICE DETAILS</h3>
+                <div class="price-row">
+                    <span>Price (<span id="totalItems">0</span> items)</span>
+                    <span id="subTotal">₹0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Discount</span>
+                    <span class="discount-amount">-₹0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Delivery Charges</span>
+                    <span class="free">Free</span>
+                </div>
+                <div class="total-amount">
+                    <span>Total Amount</span>
+                    <span id="totalAmount">₹0.00</span>
+                </div>
+                <button class="checkout-btn">PLACE ORDER</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="flex-all-center">
+        <p>Copyright © Shreyash HK</p>
+    </footer>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>

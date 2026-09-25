@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f3f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 380px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2874f0;
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+    position: relative;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s;
+  }
+  
+  .input-group input:focus {
+    border-color: #2874f0;
+    box-shadow: 0 0 4px rgba(40, 116, 240, 0.4);
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #fb641b;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    background: #d65a15;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .login-link a {
+    color: #2874f0;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background: #2874f0;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header-left .explore {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  
+  .header-left .plus {
+    color: #ffe500;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header-btn {
+    background: white;
+    color: #2874f0;
+    padding: 6px 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header-link {
+    cursor: pointer;
+  }
+  
